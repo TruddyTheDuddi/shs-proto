@@ -24,7 +24,8 @@ body{
     color: var(--white);
     display: grid;
     font-family: roboto;
-    margin: 20px;
+    padding: 20px;
+    margin: auto;
     max-width: 550px;
 }
 
