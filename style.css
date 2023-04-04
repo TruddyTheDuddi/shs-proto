@@ -1,0 +1,110 @@
+:root{
+    --bg: #033B55;
+    --box: #0E65A3;
+    --white: #ebe7df;
+    --white-fade: #b2ada2;
+    --black: #ebe7df;
+    --primary: #F79500;
+    --dark: rgb(52, 52, 52);
+}
+
+@font-face {
+    font-family: 'lily';
+    src: url(res/LilitaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(res/RobotoSlab-VariableFont_wght.ttf);
+}
+
+body{
+    background: var(--bg);
+    font-size: 1em;
+    color: var(--white);
+    display: grid;
+    font-family: roboto;
+    margin: 20px;
+    max-width: 550px;
+}
+
+main{
+    gap: 15px;
+    display: grid;
+    margin: auto;
+}
+
+.title{
+    max-width: calc(100% - 3em);
+    background-color: var(--box);
+    padding: 0.5em;
+    clip-path: polygon(0.2em 0, 100% 0.2em, 100% 100%, 0 calc(100% - 0.2em));
+}
+
+h1,h2,h3{
+    font-weight: normal;
+    font-family: lily;
+    margin: 0;
+}
+
+.board{
+    display: grid;
+    border: none;
+    background-color: var(--white);
+    font-size: 1.2em;
+    resize: none;
+    font-family: inherit;
+    border-radius: 0;
+    color: var(--dark);
+}
+
+.board .prev{
+    font-size: 1.4em;
+    border-top: 6px dotted var(--bg);
+    padding: 1em;
+}
+
+.board .prev:first-child{
+    margin-top: -3px;
+}
+
+.board .prev::after,
+.board .prev::before{
+    content: '"';
+    opacity: 0.5;
+    margin: 0 0.2em;
+}
+
+.board .prev.blur{
+    transition: 2s color, 0.3s font-size;
+    color: var(--white-fade);
+}
+
+textarea{
+    border: none;
+    background-color: var(--white);
+    font-size: 1.2em;
+    resize: none;
+    font-family: inherit;
+    border-radius: 0;
+    outline: none;
+    padding: 1em;
+    border-top: 6px dotted var(--bg);
+}
+
+small{
+    opacity: 0.6;
+}
+
+button{
+    background-color: var(--primary);
+    border: none;
+    font: inherit;
+    color: inherit;
+    padding: 0.8em;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.9;
+}
